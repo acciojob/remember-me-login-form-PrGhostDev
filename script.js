@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
         var existingUserButton = document.createElement('button');
         existingUserButton.setAttribute('id', 'existing');
         existingUserButton.textContent = 'Login as existing user';
-        existingUserButton.style.display = 'none'; // Hide the button by default
+
+        // Append the button to the form
+        document.getElementById('loginForm').appendChild(existingUserButton);
 
         existingUserButton.addEventListener('click', function () {
             // Retrieve and display the saved username
             var savedUsername = localStorage.getItem('rememberedUser');
             alert('Logged in as ' + savedUsername);
         });
-
-        document.body.appendChild(existingUserButton);
     }
 
     // Add event listener to the login form
@@ -39,3 +39,4 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Logged in as ' + username);
     });
 });
+	
