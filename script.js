@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.removeItem('rememberedUser');
             localStorage.removeItem('rememberedPassword');
         }
-
-        // Show the login alert
-        alert('Logged in as ' + username);
+        alert(username);
     });
 });
