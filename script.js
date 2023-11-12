@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var existingUserButton = document.createElement('button');
         existingUserButton.setAttribute('id', 'existing');
         existingUserButton.textContent = 'Login as existing user';
+        existingUserButton.style.display = 'none'; // Hide the button by default
+
         existingUserButton.addEventListener('click', function () {
             // Retrieve and display the saved username
             var savedUsername = localStorage.getItem('rememberedUser');
